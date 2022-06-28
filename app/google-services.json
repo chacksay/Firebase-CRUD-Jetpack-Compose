@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "832621840180",
+    "project_id": "huellarc-b7e32",
+    "storage_bucket": "huellarc-b7e32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832621840180:android:1f6b15a60a4aa39b820761",
+        "android_client_info": {
+          "package_name": "dev.leonardom.firebasecrud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832621840180-o4k10d15d0f9it926m8c3ni45obrv1br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1AuX_aR9ZlSb3mu-S7_9jlVphl3-zzQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "832621840180-o4k10d15d0f9it926m8c3ni45obrv1br.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
