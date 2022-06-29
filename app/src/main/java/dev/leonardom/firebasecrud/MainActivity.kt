@@ -48,11 +48,15 @@ fun NavGraphBuilder.addBookList(
     composable(
         route = Destination.BookList.route
     ){
+        val viewModel:BookDetailViewModel= hiltViewModel()
+        var state = viewModel.state.value
+        val isRefreshing = viewModel.isRefreshing.collectAsAtate()
         BookListScreen(
             navigateToBookDetail = {
+                state = state,
                 navController.navigate(Destination.BookDetail.route)
             },
-            isRefreshing = false,
+            isRefreshing = isRefreshing.value,
             refreshData = {}
         )
     }

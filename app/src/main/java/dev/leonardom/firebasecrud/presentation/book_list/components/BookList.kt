@@ -20,10 +20,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
+import dev.leonardom.firebasecrud.presentation.book_list.BookListState
 
 @ExperimentalMaterialApi
 @Composable
 fun BookList(
+    state: BookListState,
     isRefreshing: Boolean,
     refreshData: () -> Unit,
 ) {
@@ -38,8 +40,8 @@ fun BookList(
                 modifier = Modifier.fillMaxSize()
             ) {
                 items(
-                    items = listOf<String>()
-                ){
+                    items = state.books
+                ){ book ->
 
                     var isDeleted by remember { mutableStateOf(false) }
                     val dismissState = rememberDismissState(
@@ -95,7 +97,7 @@ fun BookList(
                         if(isDeleted) {
                             // TODO("DELETE BOOK")
                         } else {
-                            BookListItem()
+                            BookListItem(book)
                         }
                     }
                 }

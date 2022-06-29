@@ -17,6 +17,7 @@ import dev.leonardom.firebasecrud.ui.theme.Red100
 @ExperimentalMaterialApi
 @Composable
 fun BookListScreen(
+    state:BookListState,
     navigateToBookDetail: () -> Unit,
     isRefreshing: Boolean,
     refreshData: () -> Unit,
@@ -34,6 +35,7 @@ fun BookListScreen(
         }
     ) {
         BookList(
+            state=state,
             isRefreshing = isRefreshing,
             refreshData = refreshData
         )
