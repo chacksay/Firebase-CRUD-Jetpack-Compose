@@ -50,7 +50,7 @@ fun NavGraphBuilder.addBookList(
     ){
         val viewModel:BookDetailViewModel= hiltViewModel()
         var state = viewModel.state.value
-        val isRefreshing = viewModel.isRefreshing.collectAsAtate()
+        val isRefreshing = viewModel.isRefreshing.collectAsState()
         BookListScreen(
             navigateToBookDetail = {
                 state = state,
